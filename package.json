@@ -1,0 +1,22 @@
+{
+  "name": "ereptiledestruction.com",
+  "version": "1.0.0",
+  "description": "Ereptile Destruction website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bllfrnch/ereptiledestruction.com.git"
+  },
+  "author": "Bill French",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bllfrnch/ereptiledestruction.com/issues"
+  },
+  "homepage": "https://github.com/bllfrnch/ereptiledestruction.com#readme",
+  "devDependencies": {
+    "webpack": "^3.4.1"
+  }
+}
