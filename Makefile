@@ -1,6 +1,6 @@
-BUILD := build
-DATA := data
-SRC := src
+BUILD = build
+DATA = data
+SRC = src
 
 build: fe, publish
 
@@ -15,3 +15,6 @@ fe:
 
 publish:
 	npm run publish
+
+start:
+	npm run start
