@@ -8,6 +8,7 @@
   }
 }
 
+// MEDIA QUERIES:
 @mixin large {
   @include mq($min-width: $medium) {
     @content;
@@ -36,4 +37,29 @@
   @include mq($min-width: $small) {
     @content;
   }
+}
+
+// GRID:
+@mixin span($cols) {
+  float: left;
+
+  @if $cols == $columns {
+    margin-right: 0;
+  } @else {
+    margin-right: $col-unit;
+  }
+
+  width: ($col-unit * $cols * 3) + (($cols - 1) * $col-unit);
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+@mixin last-col {
+  margin-right: 0;
+}
+
+@mixin shift($cols) {
+  margin-left: ($col-unit * $cols * 4);
 }

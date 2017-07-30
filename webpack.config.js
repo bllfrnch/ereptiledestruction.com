@@ -5,7 +5,7 @@ var webpack = require('webpack');
 var autoprefixer = require('autoprefixer');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var StyleLintPlugin = require('stylelint-webpack-plugin');
+// var StyleLintPlugin = require('stylelint-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const extractCSS = new ExtractTextPlugin({
@@ -83,14 +83,14 @@ module.exports = {
     }),
 
     // Stylelint plugin
-    new StyleLintPlugin({
-      configFile: '.stylelintrc',
-      context: '',
-      files: '**/*.scss',
-      syntax: 'scss',
-      failOnError: false,
-      quiet: false
-    }),
+    // new StyleLintPlugin({
+    //   configFile: '.stylelintrc',
+    //   context: '',
+    //   files: '**/*.scss',
+    //   syntax: 'scss',
+    //   failOnError: false,
+    //   quiet: false
+    // }),
 
     new CopyWebpackPlugin(
       [

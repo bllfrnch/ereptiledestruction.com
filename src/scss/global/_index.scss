@@ -9,9 +9,11 @@ html {
 .page {
   margin: 0 auto;
   max-width: 1200px;
+  padding: 0 2rem;
 
   @include small {
     max-width: 480px;
+    padding: 1rem;
   }
 
   @include medium {
@@ -20,7 +22,15 @@ html {
 }
 
 .ed-logo {
-  a {
+  margin: 1rem 0 2rem;
+
+  a,
+  img {
     @include clearfix;
+    display: block;
+  }
+
+  img {
+    margin: 0 auto;
   }
 }

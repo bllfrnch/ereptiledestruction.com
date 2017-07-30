@@ -9,3 +9,10 @@ $green: #83f52c;
 // BREAKPOINTS:
 $small: 600px;
 $medium: 1000px;
+
+// GRID
+$col-width: 90px;
+$gutter-width: 30px;
+// columns are three "units" wide, gutter is one "unit" wide.
+$columns: 12;
+$col-unit: 100% / (($columns * 3) + ($columns - 1));
