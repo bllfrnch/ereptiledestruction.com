@@ -1,8 +1,39 @@
-// nothing to see here
+@import '~sass-mediaqueries/media-queries';
+
 @mixin clearfix {
   &::after {
     clear: both;
     content: '';
     display: table;
+  }
+}
+
+@mixin large {
+  @include mq($min-width: $medium) {
+    @content;
+  }
+}
+
+@mixin small {
+  @include mq($max-width: $small) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @include mq($min-width: $small, $max-width: $medium) {
+    @content;
+  }
+}
+
+@mixin medium-down {
+  @include mq($max-width: $medium) {
+    @content;
+  }
+}
+
+@mixin medium-up {
+  @include mq($min-width: $small) {
+    @content;
   }
 }

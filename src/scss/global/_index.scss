@@ -3,7 +3,20 @@
 @import 'mixins';
 
 html {
-  background-color: black;
+  background-color: $black;
+}
+
+.page {
+  margin: 0 auto;
+  max-width: 1200px;
+
+  @include small {
+    max-width: 480px;
+  }
+
+  @include medium {
+    max-width: 800px;
+  }
 }
 
 .ed-logo {

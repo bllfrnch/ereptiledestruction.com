@@ -5,7 +5,7 @@ EREPTILE_BUCKET = gs://www.ereptiledestruction.com
 
 build: fe, publish
 
-deploy:
+deploy: bundle
 	gsutil rsync -R $(BUILD) $(EREPTILE_BUCKET)
 
 clean:
@@ -17,8 +17,8 @@ config:
 fe:
 	npm run build
 
-publish:
-	npm run publish
+bundle:
+	npm run bundle
 
 start:
 	npm run start
