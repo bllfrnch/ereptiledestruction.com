@@ -6,6 +6,7 @@ var autoprefixer = require('autoprefixer');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var StyleLintPlugin = require('stylelint-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const extractCSS = new ExtractTextPlugin({
   filename: 'site.css',
@@ -33,8 +34,8 @@ module.exports = {
       },
 
       {
-        test: /\.tpl$/,
-        loader: 'mustache-loader'
+        test: /\.hbs$/,
+        loader: 'handlebars-loader'
       },
 
       {
@@ -64,7 +65,7 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: path.resolve(__dirname, 'src/tpl/index.tpl'),
+      template: path.resolve(__dirname, 'src/tpl/index.hbs'),
       inject: true,
       favicon: '',
       hash: true,
@@ -89,7 +90,13 @@ module.exports = {
       syntax: 'scss',
       failOnError: false,
       quiet: false
-    })
+    }),
+
+    new CopyWebpackPlugin(
+      [
+        {from: 'src/imgs/*', to: 'imgs', flatten: true}
+      ]
+    )
   ],
 
   stats: {
