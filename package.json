@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-BAK": "http-server -p 3000 build",
-    "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --port 3001 --hot --inline --content-base build",
+    "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --port 3001 --hot --inline --content-base build/",
     "bundle": "./node_modules/.bin/webpack --config webpack.config.js"
   },
   "repository": {
@@ -25,6 +25,7 @@
     "babel-loader": "^7.1.1",
     "css-loader": "^0.28.4",
     "es6-promise": "^4.1.1",
+    "extract-text-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^2.29.0",
     "http-server": "^0.10.0",
     "mustache": "^2.3.0",
@@ -40,6 +41,6 @@
     "webpack-dev-server": "^2.6.1"
   },
   "dependencies": {
-    "extract-text-webpack-plugin": "^3.0.0"
+    "normalize.scss": "^0.1.0"
   }
 }

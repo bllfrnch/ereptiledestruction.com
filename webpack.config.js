@@ -7,23 +7,64 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var StyleLintPlugin = require('stylelint-webpack-plugin');
 
+const extractCSS = new ExtractTextPlugin({
+  filename: 'site.css',
+  disable: process.env.NODE_ENV === "development"
+});
+
 require('es6-promise').polyfill();
+
+console.log('WRITING TO...', path.resolve(__dirname, 'build'));
 
 module.exports = {
   entry: './src/js/main.js',
 
   output: {
-    path: __dirname,
-    filename: './build/js/app.js'
+    path: path.resolve(__dirname, 'build'),
+    filename: 'app.js'
+  },
+
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      },
+
+      {
+        test: /\.tpl$/,
+        loader: 'mustache-loader'
+      },
+
+      {
+        test: /\.scss$/,
+        use: extractCSS.extract({
+            use: [
+              {
+                loader: "css-loader"
+              },
+              {
+                loader: "sass-loader"
+              },
+              {
+                loader: 'postcss-loader'
+              }
+            ],
+            // use style-loader in development
+            fallback: "style-loader"
+        })
+      }
+    ]
   },
 
   plugins: [
     // Specify the resulting CSS filename
-    new ExtractTextPlugin('./build/css/app.css'),
+    extractCSS,
 
     new HtmlWebpackPlugin({
-      filename: './build/index.html',
-      template: './src/tpl/index.tpl',
+      filename: 'index.html',
+      template: path.resolve(__dirname, 'src/tpl/index.tpl'),
       inject: true,
       favicon: '',
       hash: true,
@@ -50,34 +91,6 @@ module.exports = {
       quiet: false
     })
   ],
-
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/
-      },
-
-      {
-        test: /\.tpl$/,
-        loader: 'mustache-loader'
-      },
-
-      {
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: "css-loader"
-        })
-      },
-
-      {
-        test: /\.scss$/,
-        loaders: ['style-loader', 'css-loader', 'sass-loader', 'postcss-loader']
-      }
-    ]
-  },
 
   stats: {
     // Colored output
