@@ -3,6 +3,10 @@ body {
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   font-size: 20px;
   line-height: 1.6;
+
+  * {
+    box-sizing: border-box;
+  }
 }
 
 h1,
@@ -13,6 +17,7 @@ h3 {
 
 h1 {
   font-size: 3rem;
+  margin: 0;
 }
 
 h2 {
@@ -21,6 +26,17 @@ h2 {
 
 h3 {
   font-size: 2rem;
+}
+
+a {
+  color: $pink;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover {
+    color: $yellow;
+    transition: all .5s;
+  }
 }
 
 footer {

@@ -5,3 +5,9 @@
 html {
   background-color: black;
 }
+
+.ed-logo {
+  a {
+    @include clearfix;
+  }
+}

@@ -1,1 +1,8 @@
 // nothing to see here
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}

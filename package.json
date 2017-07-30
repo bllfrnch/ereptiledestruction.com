@@ -43,6 +43,7 @@
     "webpack-dev-server": "^2.6.1"
   },
   "dependencies": {
-    "normalize.scss": "^0.1.0"
+    "normalize.scss": "^0.1.0",
+    "scrollmagic": "^2.0.5"
   }
 }
