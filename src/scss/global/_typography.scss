@@ -24,12 +24,67 @@ h2 {
   border-bottom: solid 2px;
   font-size: 2.333rem;
   line-height: 1;
-  margin: 1em 0 .5em;
+  margin: 1rem 0 .5rem;
+  //padding-left: 1em;
+
+  &.heading {
+    &:before {
+      margin-right: .5rem;
+    }
+  }
+
+  &.heading-intro {
+    &:before {
+      content: '🍆';
+    }
+  }
+
+  &.heading-video {
+    &:before {
+      content: '📺';
+    }
+  }
+
+  &.heading-audio {
+    &:before {
+      content: '📻';
+    }
+  }
+
+  &.heading-shows {
+    &:before {
+      content: '⚡'; // 📅
+    }
+  }
+
+  &.heading-mailing-list {
+    &:before {
+      content: '📭';
+    }
+  }
+
+  &.heading-store {
+    &:before {
+      content: '🤑';
+    }
+  }
+
+  &.heading-pics {
+    &:before {
+      content: '🌅';
+    }
+  }
+
+  &.heading-contact {
+    &:before {
+      content: '☎';
+    }
+  }
 }
 
 h3 {
   font-size: 2rem;
-  margin: 1em 0 .25em;
+  margin: 1rem 0 .5rem;
 }
 
 p {
@@ -37,13 +92,17 @@ p {
 }
 
 a {
+  background: $black;
   color: $pink;
+  display: inline-block;
   font-weight: bold;
+  padding: .125rem 1rem;
   text-decoration: none;
 
   &:hover {
-    color: $yellow;
-    transition: all .5s;
+    background-color: $green;
+    color: $white;
+    transition: all .3s;
   }
 }
 
