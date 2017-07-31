@@ -29,7 +29,7 @@ h2 {
 
   &.heading {
     &:before {
-      margin-right: .5rem;
+      margin-right: .75rem;
     }
   }
 
@@ -107,5 +107,10 @@ a {
 }
 
 footer {
-  font-size: .75rem;
+  text-align: center;
+  .footer-content {
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 auto;
+  }
 }
