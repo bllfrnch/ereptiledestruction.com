@@ -12,7 +12,11 @@
       <h1 class="ed-logo">
         <a href="/">
           <!-- <img srcset="examples/images/image-384.jpg 1x, examples/images/image-768.jpg 2x" alt="…"> -->
-          <img src="imgs/ed-logo.png" alt="EREPTILE DESTRUCTION" aria-label="Ereptile Destruction">
+          <picture>
+            <source srcset="imgs/ed-logo.png" media="(min-width: 601px)" alt="EREPTILE DESTRUCTION" aria-label="Ereptile Destruction">
+            <source srcset="imgs/ed-logo-mobile.png" media="(max-width: 600px)" alt="EREPTILE DESTRUCTION" aria-label="Ereptile Destruction">
+            <img src="imgs/ed-logo.png" alt="EREPTILE DESTRUCTION" aria-label="Ereptile Destruction">
+          </picture>
         </a>
       </h1>
 
