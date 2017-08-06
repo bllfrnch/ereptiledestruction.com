@@ -6,7 +6,7 @@ EREPTILE_BUCKET = gs://www.ereptiledestruction.com
 build: fe, publish
 
 deploy: bundle
-	gsutil rsync -R $(BUILD) $(EREPTILE_BUCKET)
+	gsutil -m rsync -R $(BUILD) $(EREPTILE_BUCKET)
 
 clean:
 	rm -rf $(BUILD)/*
