@@ -40,7 +40,7 @@
 }
 
 // GRID:
-@mixin span($cols) {
+@mixin span($cols, $fill: false) {
   float: left;
 
   @if $cols == $columns {
@@ -56,8 +56,12 @@
   }
 }
 
-@mixin last-col {
-  margin-right: 0;
+@mixin last-col($cols: 0) {
+  @if $cols == 0 {
+    margin-right: 0;
+  } @else {
+    margin-right: ($cols * 4 * $col-unit)
+  }
 }
 
 @mixin shift($cols) {

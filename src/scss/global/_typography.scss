@@ -1,8 +1,14 @@
+@import 'mixins';
+
 body {
   color: $white;
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   font-size: 20px;
   line-height: 1.6;
+
+  @include medium-down {
+    font-size: 16px;
+  }
 
   * {
     box-sizing: border-box;
@@ -16,13 +22,13 @@ h3 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5em;
   margin: 0;
 }
 
 h2 {
   border-bottom: solid 2px;
-  font-size: 2.333rem;
+  font-size: 2.125em;
   line-height: 1;
   margin: 1rem 0 .5rem;
   //padding-left: 1em;
@@ -83,7 +89,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.5em;
   margin: 1rem 0 .5rem;
 }
 
@@ -96,12 +102,12 @@ a {
   color: $pink;
   display: inline-block;
   font-weight: bold;
-  padding: .125rem 1rem;
   text-decoration: none;
 
   &:hover {
     background-color: $green;
     color: $white;
+    text-shadow: 0 1px 0 $black;
     transition: all .3s;
   }
 }
