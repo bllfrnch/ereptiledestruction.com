@@ -1,0 +1,56 @@
+.media-block {
+  @include clearfix;
+
+  margin: 1rem 0;
+  position: relative;
+
+  &.media-block-image {
+    @include shift(1);
+    @include span(10);
+    @include last-col(1);
+
+    @include medium-down {
+      @include shift(0);
+      @include span(12);
+    }
+  }
+
+  &.media-block-audio {
+    .iframe-wrapper {
+      @include shift(2);
+      @include span(8);
+      @include last-col(2);
+
+      height: 0;
+      padding-bottom: 100%;
+
+      @include small {
+        @include shift(0);
+        @include span(12);
+        padding-bottom: 100%;
+      }
+    }
+
+    iframe {
+      height: 100%;
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  .iframe-wrapper {
+    position: relative;
+  }
+
+  figure {
+    margin: 0;
+
+    img {
+      @include clearfix;
+      border: solid 2px $green;
+      display: block;
+      height: auto;
+      width: 100%;
+    }
+  }
+}
