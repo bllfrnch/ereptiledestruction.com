@@ -17,6 +17,11 @@
     &.nav-el-fb {
       @include clearfix;
 
+      a {
+        margin-left: .75rem;
+        padding: 0;
+      }
+
       a:hover {
         background-color: inherit;
       }

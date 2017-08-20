@@ -1,0 +1,27 @@
+#mc_embed_signup {
+  @include shift(1);
+  @include span(10);
+  @include last-col(1);
+
+  @include medium-down {
+    @include shift(0);
+    @include span(12);
+  }
+
+  div .asterisk {
+    color: $pink;
+  }
+
+  input[type=radio] {
+    margin-right: .25em;
+  }
+
+  .clear .button {
+    background-color: $pink;
+    font-weight: bold;
+
+    &:hover {
+      background-color: $green;
+    }
+  }
+}
