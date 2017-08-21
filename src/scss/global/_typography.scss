@@ -105,9 +105,7 @@ a {
   text-decoration: none;
 
   &:hover {
-    background-color: $green;
-    color: $white;
-    text-shadow: 0 1px 0 $black;
+    color: $green;
     transition: all .3s;
   }
 }
