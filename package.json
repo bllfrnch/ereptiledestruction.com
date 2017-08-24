@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-BAK": "http-server -p 3000 build",
-    "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --port 3001 --hot --inline --content-base build/",
-    "bundle": "./node_modules/.bin/webpack --config webpack.config.js"
+    "start": "NODE_ENV=dev webpack-dev-server --config webpack.config.js --port 3001 --hot --inline --content-base build/",
+    "bundle": "NODE_ENV=prod webpack --config webpack.config.js -p"
   },
   "repository": {
     "type": "git",

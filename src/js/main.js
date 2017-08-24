@@ -12,11 +12,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
   container.append(ea);
 });
-
-export default {
-  x: {},
-  y: () => {
-
-  },
-  z: 'asdf'
-};

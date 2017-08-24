@@ -17,6 +17,8 @@ require('es6-promise').polyfill();
 
 console.log('WRITING TO...', path.resolve(__dirname, 'build'));
 
+console.log(process.env.NODE_ENV);
+
 module.exports = {
   entry: './src/js/main.js',
 
@@ -106,5 +108,5 @@ module.exports = {
   },
 
   // Create Sourcemaps for the bundle
-  devtool: 'source-map'
+  devtool: process.env.NODE_ENV === 'dev' && 'source-map'
 };
