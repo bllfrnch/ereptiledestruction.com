@@ -52,7 +52,7 @@
   width: ($col-unit * $cols * 3) + (($cols - 1) * $col-unit);
 
   &:last-child {
-    margin-right: 0;
+    // margin-right: 0;
   }
 }
 

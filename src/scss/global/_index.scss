@@ -40,3 +40,14 @@ html {
     width: 100%;
   }
 }
+
+.text {
+  @include shift(1);
+  @include span(10);
+  @include last-col(1);
+
+  @include medium-down {
+    @include shift(0);
+    @include span(12);
+  }
+}
