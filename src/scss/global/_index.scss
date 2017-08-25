@@ -23,6 +23,10 @@ html {
 .section {
   border-bottom: solid 2px $white;
   margin-bottom: 2rem;
+
+  @include medium-down {
+    margin-bottom: 0;
+  }
 }
 
 .ed-logo {

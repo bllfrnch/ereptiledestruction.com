@@ -1,6 +1,10 @@
 .media-blocks {
   margin-bottom: 2rem;
 
+  @include medium-down {
+    margin-bottom: 0;
+  }
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -59,6 +63,12 @@
 
   .iframe-wrapper {
     position: relative;
+  }
+
+  .media-block-content {
+    h3 {
+      margin-top: 0;
+    }
   }
 
   figure,
