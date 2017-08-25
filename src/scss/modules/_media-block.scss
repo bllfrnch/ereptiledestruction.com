@@ -18,6 +18,10 @@
     margin-bottom: 0;
   }
 
+  @include medium-down {
+    background-color: $black;
+  }
+
   // &.media-block-image {
   //   @include shift(1);
   //   @include span(10);
@@ -58,7 +62,8 @@
   }
 
   figure,
-  form {
+  form,
+  .media-block-content {
     @include shift(1);
     @include span(10);
     @include last-col(1);
