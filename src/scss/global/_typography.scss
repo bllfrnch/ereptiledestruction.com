@@ -27,7 +27,7 @@ h1 {
 }
 
 h2 {
-  border-bottom: solid 2px;
+  // border-bottom: solid 2px;
   font-size: 2.125em;
   line-height: 1;
   margin: 1rem 0 .5rem;
@@ -98,7 +98,6 @@ p {
 }
 
 a {
-  background-color: $black;
   color: $pink;
   display: inline-block;
   font-weight: bold;

@@ -1,19 +1,33 @@
+.media-blocks {
+  margin-bottom: 2rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .media-block {
   @include clearfix;
 
-  margin: 1rem 0;
+  background-color: $darker;
+  margin: 0 0 1rem;
+  padding: 1em 0;
   position: relative;
 
-  &.media-block-image {
-    @include shift(1);
-    @include span(10);
-    @include last-col(1);
-
-    @include medium-down {
-      @include shift(0);
-      @include span(12);
-    }
+  &:last-child {
+    margin-bottom: 0;
   }
+
+  // &.media-block-image {
+  //   @include shift(1);
+  //   @include span(10);
+  //   @include last-col(1);
+  //
+  //   @include medium-down {
+  //     @include shift(0);
+  //     @include span(12);
+  //   }
+  // }
 
   &.media-block-audio {
     .iframe-wrapper {
@@ -43,8 +57,19 @@
     position: relative;
   }
 
-  figure {
-    margin: 1rem 0;
+  figure,
+  form {
+    @include shift(1);
+    @include span(10);
+    @include last-col(1);
+
+    @include medium-down {
+      @include shift(0);
+      @include span(12);
+    }
+
+    margin-bottom: 0;
+    margin-top: 0;
 
     img {
       @include clearfix;

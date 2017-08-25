@@ -20,6 +20,11 @@ html {
   }
 }
 
+.section {
+  border-bottom: solid 2px $white;
+  margin-bottom: 2rem;
+}
+
 .ed-logo {
   margin: 1rem 0;
   position: relative;
