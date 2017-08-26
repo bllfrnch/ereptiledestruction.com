@@ -43,8 +43,24 @@
       @include span(8);
       @include last-col(2);
 
-      height: 0;
       padding-bottom: 100%;
+    }
+  }
+
+  &.media-block-video {
+    .iframe-wrapper {
+      @include shift(1);
+      @include span(10);
+      @include last-col(1);
+
+      padding-bottom: 47%;
+    }
+  }
+
+  &.media-block-audio,
+  &.media-block-video {
+    .iframe-wrapper {
+      height: 0;
 
       @include small {
         @include shift(0);
