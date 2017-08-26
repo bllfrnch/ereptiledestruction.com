@@ -72,7 +72,10 @@ module.exports = {
       favicon: '',
       hash: true,
       cache: true,
-      showErrors: true
+      showErrors: true,
+      data: {
+        year: (new Date()).getFullYear()
+      }
     }),
 
     // todo: figure out autoprefixer
