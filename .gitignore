@@ -1,5 +1,6 @@
 .DS_Store
 Thumbs.db
 *.log
+.idea
 node_modules/
 build/
