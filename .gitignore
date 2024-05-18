@@ -3,4 +3,3 @@ Thumbs.db
 *.log
 .idea
 node_modules/
-build/
